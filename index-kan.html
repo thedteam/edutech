@@ -78,10 +78,55 @@ document.onkeydown = function (event) {
 /////////////////////end///////////////////////
 </script>
 
+	<div><div class="modal fade" id="edutech" tabindex="-1" role="dialog" aria-labelledby="edutechLabel" aria-hidden="true">  <div class="modal-dialog  modal-dialog-centered" style="height:auto" role="document">    <div class="modal-content"><div class="modal-header">  <h5 class="no-anim modal-title" id="edutechLabel" style="color:black;">Today's Qoute</h5>  <a href="#" class="no-anim close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div><center><div class="modal-body" id="edutech_body" style="color:black;"><font size="6">A Good Education Is A Foundation For A Better Future.</div></font></center>
+<a href="#top">
+<center></center>
+<center> <img src="assets/images/edupot.jpeg"  style="width:250px;height:250px;" ondragstart="return false;"/></center></a>
+<div class="modal-footer"></div>    </div>  </div></div><script>document.addEventListener("DOMContentLoaded", function() {  $("#edutech").on("hidden.bs.modal", function () {    var html = $( "#edutech_body" ).html();    $( "#edutech_body" ).empty();    $( "#edutech_body" ).append(html);  })});</script></div>
+
+	<script>
+	if (typeof OpenModal === 'undefined') {
+		OpenModal = function(modalName) {
+			if ($('#' + modalName).length)
+				$('#' + modalName).modal('show');
+			else
+				alert("Sorry, but there is no modal for " + modalName);
+		}
+	}
+
+	function modalSetCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function modalGetCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+	</script>
+
+</section><script>
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout( function() { OpenModal("edutech"); } , 10000);
+});
+</script>  
+
+
 </head>
 <body>
-
-
 
 
 <div id="menu-b" custom-code="true"><section>
