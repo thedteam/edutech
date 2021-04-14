@@ -12,7 +12,7 @@ video#videobg {
 	height: auto;
 	z-index: -100;
 	transform: translateX(-50%) translateY(-50%);
-	background: url('assets/images/mbr-.jpg') no-repeat;
+	background: url('assets/images/mbr-1.jpg') no-repeat;
 	background-size: cover;
 	transition: 1s opacity;
 }
