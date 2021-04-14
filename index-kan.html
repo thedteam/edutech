@@ -142,7 +142,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="navbar-brand">
                         
                         <center><a class="navbar-caption" href=""><marquee behavior="scroll"direction="left">
-ಸೈಟ್ ನಿರ್ಮಾಣ ಹಂತದಲ್ಲಿದೆ ....! ಸೈಟ್ ನಿರ್ಮಾಣ ಹಂತದಲ್ಲಿದೆ ....! ಉಂಟಾದ ಅನಾನುಕೂಲತೆಗೆ ಕ್ಷಮಿಸಿ!</marquee></a></center>
+ಸೈಟ್ ನಿರ್ಮಾಣ ಹಂತದಲ್ಲಿದೆ ....! ಸೈಟ್ ನಿರ್ಮಾಣ ಹಂತದಲ್ಲಿದೆ ....! ಉಂಟಾದ ಅನಾನುಕೂಲತೆಗೆ ಕ್ಷಮಿಸಿ!
+</marquee></a></center>
 
                     </div>
 
@@ -153,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="hamburger-icon"></div>
                     </button>
 
- <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span style="font-weight: normal;">Menu</span></a><div class="dropdown-menu"><center><a class="dropdown-item mbr-editable-menu-item" href="">Home</a><a class="dropdown-item mbr-editable-menu-item" href="">About Us</a><a class="dropdown-item mbr-editable-menu-item" href="#">What We Do?</a><a href="" class="dropdown-item">Contact Us</a><a class="dropdown-item mbr-editable-menu-item" href="">Study Materials</a><a class="dropdown-item mbr-editable-menu-item" href="">Register</a><a class="dropdown-item mbr-editable-menu-item" href="">Any Doubts?</a><a class="dropdown-item mbr-editable-menu-item" href="">Terms and Conditions</a><a class="dropdown-item mbr-editable-menu-item" href="">Privacy Policy</a></center><div class="dropdown open">
+ <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="" data-toggle="dropdown-submenu" aria-expanded="false"><span style="font-weight: normal;">Menu</span></a><div class="dropdown-menu"><a class="dropdown-item mbr-editable-menu-item" href="">Home</a><a class="dropdown-item mbr-editable-menu-item" href="">About Us</a><a class="dropdown-item mbr-editable-menu-item" href="#">What We Do?</a><a href="" class="dropdown-item">Contact Us</a><a class="dropdown-item mbr-editable-menu-item" href="">Study Materials</a><a class="dropdown-item mbr-editable-menu-item" href="">Register</a><a class="dropdown-item mbr-editable-menu-item" href="">Any Doubts?</a><a class="dropdown-item mbr-editable-menu-item" href="">Terms and Conditions</a><a class="dropdown-item mbr-editable-menu-item" href="">Privacy Policy</a><div class="dropdown open">
 
 <a class="dropdown-item dropdown-toggle" href="" data-toggle="dropdown-submenu" aria-expanded="true">Language</a>
 <div class="dropdown-menu dropdown-submenu">
@@ -207,7 +208,7 @@ video {
 
 <video src="assets/images/edutechvt.mp4" autoplay loop playsinline muted></video>
 
-<section class="mbr-section mbr-section-hero mbr-section-full extHeader15 mbr-after-navbar" id="extHeader15-d" style="background-image: url(assets/images/mbr-1.jpg);">
+<section class="mbr-section mbr-section-hero mbr-section-full extHeader15 mbr-after-navbar" id="extHeader15-d" style="background-image: url(assets/images/mbr-.jpg);">
 
     <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(43, 6, 128);">
     </div>
@@ -246,7 +247,36 @@ video {
                                 </div>
                             </form>
 
+<div>
+<center>
+<div id="clockbox"></div>
 
+<script type="text/javascript">
+var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+document.getElementById('clockbox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
+</center>
+</div>
 
 <center> © ಕೃತಿಸ್ವಾಮ್ಯ 2021 <a href="https://thedteam.tk/" class="text-warning">ದಿ 'ಡಿ  ತಂಡ</a> </center>
                     </div>
@@ -301,5 +331,3 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-
-<rssapp-wall id="MGxkCtDx8Vl3u1MX"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
