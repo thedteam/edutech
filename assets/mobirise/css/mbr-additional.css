@@ -816,3 +816,7 @@ h6,
     width: 100% !important;
   }
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
